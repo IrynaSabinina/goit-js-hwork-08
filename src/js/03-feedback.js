@@ -58,6 +58,5 @@ function populateForm(event) {
     let feedbackNew = JSON.parse(savedMessage);
     elem.email.value = feedbackNew.email;
     elem.textArea.value = feedbackNew.message;
-    console.log(feedbackNew.message);
   }
 }
