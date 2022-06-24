@@ -55,7 +55,7 @@ function textAreaSub(event) {
 function populateForm(event) {
   const savedMessage = localStorage.getItem('feedback-form-state');
   if (savedMessage) {
-    feedbackNew = JSON.parse(savedMessage);
+    let feedbackNew = JSON.parse(savedMessage);
     elem.email.value = feedbackNew.email;
     elem.textArea.value = feedbackNew.message;
     console.log(feedbackNew.message);
