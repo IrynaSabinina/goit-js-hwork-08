@@ -28,14 +28,14 @@ elem.email.addEventListener('input', onInput);
 elem.textArea.addEventListener('input', throttle(onTextAreaInput, 500));
 
 function onInput(event) {
-  const emailNew = event.currentTarget.value;
+  const emailNew = event.target.value;
   feedback.email = emailNew;
   //   console.log(feedback);
   localStorage.setItem('feedback-form-state', JSON.stringify(feedback));
 }
 
 function onTextAreaInput(event) {
-  const messageNew = event.currentTarget.value;
+  const messageNew = event.target.value;
   feedback.message = messageNew;
   //   console.log(feedback);
   localStorage.setItem('feedback-form-state', JSON.stringify(feedback));

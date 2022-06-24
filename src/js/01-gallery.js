@@ -20,9 +20,9 @@ const image = images.join(' ');
 galleryRef.insertAdjacentHTML('afterbegin', image);
 console.log(image);
 
-let gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {
-  console.log(gallery);
+let gallery = new SimpleLightbox('.gallery a', {
+  captionData: 'alt',
+  captionDeay: '250',
 });
 
 gallery.on('error.simplelightbox', function (e) {
